@@ -1,0 +1,342 @@
+/* --- General --- */
+.root {
+    -fx-background-image: url('background.jpg');
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* --- Home Page Specific --- */
+.home-page .content-box {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-padding: 40;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 30, 0, 0, 0);
+}
+
+.home-page .logo-icon {
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 20, 0, 0, 0);
+}
+
+.home-page .title-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #1e4b26, 10, 0.8, 0, 0);
+    -fx-line-spacing: 0.2em;
+}
+
+.home-page .slogan-label {
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-text-fill: #8f9c6b; /* Olive Green */
+    -fx-text-alignment: center;
+}
+
+.home-page .button {
+    -fx-background-color: #b05216; /* Orange-Brown */
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 30;
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255, 255, 255, 0.5);
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 5);
+}
+
+.home-page .button:hover {
+    -fx-background-color: #1e4b26; /* Dark Green */
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.home-page .button:pressed {
+    -fx-background-color: #4f2915; /* Dark Brown */
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* --- Dashboard Page Specific --- */
+
+/* Header Card (Glassmorphism) */
+.header-box {
+    -fx-background-color: rgba(30, 75, 38, 0.85); /* Semi-transparent Dark Green */
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.2); /* Glassy top/left highlight */
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0, 0, 5);
+}
+
+.header-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);
+}
+
+.header-logo {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 2);
+}
+
+/* Footer Card (Glassmorphism) */
+.footer-box {
+    -fx-background-color: rgba(79, 41, 21, 0.85); /* Semi-transparent Dark Brown */
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+/* Sidebar Card (Glassmorphism) */
+.sidebar {
+    -fx-background-color: rgba(79, 41, 21, 0.8); /* Semi-transparent Dark Brown */
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+.category-list-view {
+    -fx-background-color: transparent;
+    -fx-padding: 0; /* Remove padding from the list view itself */
+}
+
+.category-list-view .list-cell {
+    -fx-background-color: transparent;
+    -fx-font-size: 16px; /* Increased font size for visibility */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-padding: 12 15; /* Increased padding for taller boxes */
+    -fx-text-fill: #f0f0f0; /* High contrast light text */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 2, 0, 0, 1); /* Text shadow for readability */
+    -fx-border-color: transparent transparent rgba(143, 156, 107, 0.2) transparent;
+    -fx-border-width: 1;
+    -fx-transition: all 0.2s ease-in-out;
+    -fx-alignment: CENTER_LEFT; /* Align text to left */
+}
+
+/* Hide empty rows */
+.category-list-view .list-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-effect: null; /* Remove shadow from empty cells */
+}
+
+.category-list-view .list-cell:hover {
+    -fx-background-color: rgba(176, 82, 22, 0.3); /* Orange-Brown glass hover */
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-background-radius: 5;
+}
+
+.category-list-view .list-cell:selected {
+    -fx-background-color: rgba(30, 75, 38,.9); /* Dark Green glass selected */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-border-color: #b05216;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 1);
+}
+
+/* Details Pane Card (Glassmorphism) */
+.details-pane {
+    -fx-background-color: rgba(30, 75, 38, 0.85); /* Semi-transparent Dark Green */
+    -fx-background-radius: 15;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 0);
+}
+
+/* Placeholder text */
+.details-placeholder {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b05216; /* Orange-Brown */
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 2, 0, 0, 1);
+}
+
+.option-response-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0, 0, 2);
+}
+
+/* SplitPane Styling - Restored padding for gaps */
+.split-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 15;
+}
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10px;
+}
+
+/* List View in Details Pane */
+.details-pane .list-view {
+    -fx-background-color: transparent;
+}
+
+.details-pane .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e0e0e0; /* Light text for readability on dark green */
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-border-color: transparent transparent rgba(255, 255, 255, 0.1) transparent;
+    -fx-border-width: 1px;
+}
+
+.details-pane .list-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 5;
+}
+
+/* --- Match View Specific --- */
+
+.filter-button {
+    -fx-background-color: #4f2915; /* Dark Brown */
+    -fx-text-fill: #8f9c6b; /* Olive Green */
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-background-radius: 6;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-width: 1px;
+    -fx-border-radius: 6;
+}
+
+.filter-button:hover {
+    -fx-background-color: #b05216; /* Orange-Brown */
+    -fx-text-fill: white;
+}
+
+.filter-button-active {
+    -fx-background-color: #1e4b26; /* Dark Green */
+    -fx-text-fill: white;
+    -fx-border-color: #8f9c6b;
+}
+
+.month-header-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 5, 0, 0, 2);
+}
+
+.matches-scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.matches-row-container {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.match-card {
+    -fx-background-color: rgba(79, 41, 21, 0.85); /* Semi-transparent Dark Brown */
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255, 255, 255, 0.15);
+    -fx-border-width: 1px;
+    -fx-border-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 5);
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.match-card:hover {
+    -fx-background-color: rgba(176, 82, 22, 0.9); /* Orange-Brown Glass */
+    -fx-border-color: white;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.team-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.match-details-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #e0e0e0;
+}
+
+.score-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #b05216; /* Orange-Brown */
+}
+
+.status-badge {
+    -fx-background-color: #b05216; /* Orange-Brown */
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 6;
+    -fx-background-radius: 6;
+    -fx-translate-x: -10;
+    -fx-translate-y: 10;
+}
+
+/* --- Standings View Specific --- */
+.standings-scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.standings-header, .standings-row {
+    -fx-padding: 8 12;
+    -fx-background-radius: 8;
+    -fx-border-color: transparent transparent rgba(143, 156, 107, 0.2) transparent;
+    -fx-border-width: 1;
+}
+
+.standings-header {
+    -fx-background-color: rgba(79, 41, 21, 0.85); /* Dark Brown */
+}
+
+.standings-row {
+    -fx-background-color: rgba(30, 75, 38, 0.7); /* Dark Green */
+    -fx-transition: all 0.2s ease-in-out;
+}
+
+.standings-row:hover {
+    -fx-background-color: rgba(176, 82, 22, 0.7); /* Orange-Brown */
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}
+
+.standings-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8f9c6b; /* Olive Green */
+}
+
+.standings-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+}
+
+.standings-cell.team-cell {
+    -fx-alignment: CENTER_LEFT;
+}
+
+.standings-cell.points-cell {
+    -fx-font-weight: bold;
+    -fx-text-fill: #b05216; /* Orange-Brown */
+}
